@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-7 mx-auto text-center" id="div1">
+            <h4>Create New Budget</h4>
+        </div>
+
+        <div class="col-7 mx-auto bg-light p-4">
+            <input type="date" class="form form-control" id="inp" [(ngModel)]="date">
+            <input type="text" class="form form-control" placeholder="Your Item Budget e.g(10000)" id="inp1" [(ngModel)]="amount">
+            <div class="row">
+                <div class="col-6">
+                    <button class="btn" (click)="createBudget()">Create Budget</button>
+                </div>
+
+                <div class="col-6">
+                    <button class="btn"><a routerLink="/dashboard/allbudgets">View All Budgets</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

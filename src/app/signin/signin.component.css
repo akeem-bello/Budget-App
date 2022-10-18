@@ -1,0 +1,24 @@
+h3{
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.div1{
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 13pt;
+    color: black;
+}
+
+.p1{
+    font-size: 13pt;
+    color: black;
+    text-align: center;
+}
+
+.row{
+    padding: 0% 13%;
+}

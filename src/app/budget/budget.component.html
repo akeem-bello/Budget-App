@@ -1,0 +1,58 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-7 mx-auto shadow mb-4 p-4">
+            <div class="row">
+                <div class="col-12">
+                    <em>Budget Amount:</em><span id="span1">#{{budgetDetails.amount}}</span><span id="span2"><em>Items Purchased:</em></span>
+                </div>
+                <div class="col-12">
+                    <em>Amount Spent:</em> <span id="span1">#{{this.spent}}</span><span id="span3"><em>Items Remaining:</em> {{itemsArray.length}}</span>
+                </div>
+                <div class="col-7">
+                    <em>Amount Remaining:</em><span id="span1">#{{this.remaining}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-7 mx-auto shadow p-4">
+            <div class="row">
+                <div class="col-6 mb-5 p-3">
+                    <p>CREATE ITEM LIST</p>
+                    <div>
+                        <input type="text" placeholder="Name of Item" class="form form-control mb-3" [(ngModel)]="name">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Quantity" class="form form-control mb-3" [(ngModel)]="quantity">
+                    </div>
+                    <div>
+                        <input type="text" placeholder="Price" class="form form-control mb-3" [(ngModel)]="price">
+                    </div>
+                    <div style="text-align: center; margin-top: 10px;">
+                        <button class="btn btn-success" (click)="addItems()">Add Item</button>
+                    </div>
+                </div>
+                <div class="col-6 mb-5 p-3">
+                    <p>ITEM LIST</p>
+                    <table *ngIf="itemsArray.length > 0">
+                        <tr>
+                            <th>Name</th>
+                            <th>Delete</th>
+                            <th>Edit</th>
+                            <th>View</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr *ngFor="let id = index; let item of itemsArray">
+                            <td>{{item.name}}</td>
+                            <td><button class="btn btn-danger btn-sm" (click)="deleteItem(id)"><i class="fa-solid fa-trash"></i></button></td>
+                            <td><button class="btn btn-info btn-sm">Edit</button></td>
+                            <td><button class="btn btn-secondary btn-sm">View</button></td>
+                            <td><button class="btn btn-sm btn-success" (click)="purchased(id)">Mark</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-6" style="text-align: right;"><button class="btn btn-primary" routerLink="/dashboard/newbudget">Create Budget</button></div>
+                <div class="col-6"><button class="btn btn-primary" routerLink="/dashboard/allbudgets">View All Budgets</button></div>
+            </div>
+        </div>
+    </div>
+</div>

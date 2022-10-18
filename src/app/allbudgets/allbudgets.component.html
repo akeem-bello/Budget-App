@@ -1,0 +1,11 @@
+<div class="container mt-5">
+    <div class="div1 bg-light shadow">
+       <h4>All Budgets</h4>
+    <p>Categorized by date.</p>
+    <div class="row" *ngFor="let id = index; let budget of budgetArray">
+        <div class="col-6 mx-auto"><button class="btn btn-info" routerLink={{id}}>{{budget.date}}</button></div>
+        <div class="col-3 mx-auto"><button class="btn btn-danger" (click)="deleteBudget(id)"><i class="fa-solid fa-trash"></i></button></div>
+    </div> 
+    </div>
+    
+</div>

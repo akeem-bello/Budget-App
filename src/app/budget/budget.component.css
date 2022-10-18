@@ -1,0 +1,29 @@
+#span1{
+    margin-left: 10px;
+    font-size: 14pt;
+    font-weight: bolder;
+    color: purple;
+}
+
+#span2{
+    margin-left: 400px;
+}
+
+#span3{
+    margin-left: 410px;
+}
+
+p{
+    text-align: center;
+    font-size: 11pt;
+    font-weight: bold;
+    color: purple;
+}
+
+table{
+    width: 100%;
+}
+
+table td{
+    padding: 8px;
+}

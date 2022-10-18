@@ -1,0 +1,19 @@
+.nav{
+    background-color: #8389E6;
+    padding: 1% 5%;
+}
+
+a{
+    margin-right: 20px;
+    color:black;
+    font-size: 14pt;
+}
+
+#name{
+    margin-right: 800px;
+    color: purple;
+}
+
+a:hover{
+    color: purple;
+}

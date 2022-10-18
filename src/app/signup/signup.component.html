@@ -1,0 +1,28 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-5 mx-auto shadow p-4">
+            <h3>Welcome to <em><strong><span style="color: purple;">TheBudgetApp</span></strong></em>.</h3>
+            <p class="phead">Kindly Create an Account to explore the beauty of budgeting.</p>
+            <form [formGroup]="userForm" (ngSubmit)="signUp()">
+                <div class="div1">
+                    <p>First Name</p>
+                    <input type="text" class="form-control" formControlName="firstName">
+                </div>
+                <div class="div1">
+                    <p>Last Name</p>
+                    <input type="text" class="form-control" formControlName="lastName">
+                </div>
+                <div class="div1">
+                    <p>Email</p>
+                    <input type="text" class="form-control" formControlName="email">
+                </div>
+                <div class="div1">
+                    <p>Password</p>
+                    <input type="text" class="form-control" formControlName="password">
+                </div>
+                <button class="btn btn-success w-100 mt-4 mb-3">Sign Up</button>
+            </form>
+            <p class="phead">Already have an account? Sign In <a routerLink="/signin"><strong>here</strong></a>.</p>
+        </div>
+    </div>
+</div>
